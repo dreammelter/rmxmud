@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> University Square - #32 | ChatCanvas (Prototype)</title>
+    <!-- CDN hosted version of React since this is just a quick visual experiment -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <link rel="stylesheet" href="./chatcanvas.css">
+    <script src="./chatcanvas.js" type="module"></script>
+</head>
+<body>
+    <div id="title-bar">
+        <p>The Salad Bar | University Square - #32 </p>
+        <div><!-- menu icon --></div>
+    </div>
+    <div id="room-container">
+        <div id="chat-record">
+            <!-- global chat record... so a container of chat bubble components -->
+        </div>
+        <main id="canvas">
+            <div id="pt-container"><!-- canvas points --></div>
+            <div id="input-bar">
+                <div id="char-icon"></div>
+                <div id="input-wrapper">
+                    <input type="text" name="message" id="message" placeholder="Type something creative... (Ctrl + Enter to send)">
+                </div>
+                <div id="chest">
+                    <div class="pearl"></div>
+                    <div class="pearl"></div>
+                    <div class="pearl"></div>
+                    <div class="pearl"></div>
+                    <div class="pearl"></div>
+                    <div class="pearl"></div>
+                    <div class="pearl"></div>
+                    <div class="pearl"></div>
+                </div>
+            </div>
+            <div id="drawer-handle"></div>
+        </main>
+    </div>
+</body>
+</html>
