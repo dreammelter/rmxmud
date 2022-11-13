@@ -7,7 +7,9 @@ body {
 
 /* Layout divisions and BG colors */
 #title-bar {
-    background: linear-gradient(180deg, #D9D9D9 0%, #FFF 33%, #D7D7D7 97%);
+    /* background: rgba(17, 25, 40, 0.75); */
+    background: linear-gradient(180deg, #1A1A1A 0%, #151515 87%);
+
     box-shadow: 0 1px 5px 0 rgba(0,0,0,0.75);
     height: 50px;
     display: flex;
@@ -18,7 +20,7 @@ body {
 #title-bar > p {
     /* height: 15px; */
     /* width: 255px; */
-    color: #2D2D2D;
+    color: #cecece;
     font-family: Lato;
     font-size: 15px;
     line-height: 18px;
@@ -41,8 +43,16 @@ body {
 }
 
 main {
-    background: linear-gradient(179.43deg, #FFF 0%, rgba(157,144,144,0.9) 100%);
-    height: 100%; width: 100%;/* the viewer needs a specific size while the pt container scrolls around inside */
+    background: #171b1c; 
+    background-image:
+        radial-gradient(at 43% 100%, #274959 0px, transparent 50%),
+        radial-gradient(at 86% 72%, #8a2146 0px, transparent 50%),
+        radial-gradient(at 70% 23%, #4f1c4f 0px, transparent 50%);
+    
+    /* the viewer needs a specific size while the pt container scrolls around inside */
+    height: 100%; width: 100%;
+
+    box-shadow: inset 3px 3px 5px 0 rgba(0,0,0,0.5);
 }
 
 main #input-bar { 
@@ -104,9 +114,60 @@ main #chest {
 
 #chat-record {
     background: linear-gradient(180deg, #1A1A1A 0%, #151515 87%);
-    box-shadow: inset -5px 2px 3px 0 rgba(0,0,0,0.5);
     width: 315px;
+    box-shadow: inset 0 3px 5px 0 rgba(0,0,0,0.5);
 }
+
+#chat-record .user-icon {
+    height: 75px;
+    width: 75px;
+    border-radius: 8px;
+    background-color: #272728;
+}
+
+#chat-record .chat-bubble {
+    width: 295px;
+    border-radius: 12px;
+    margin: 20px 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    padding: 5px;
+
+    font-family: Lato;
+    color: #cecece;
+
+    /* background-color: hsla(184, 61%, 87%, 0.908); */
+    box-shadow: -2px 4px 4px 0 rgba(0,0,0,0.6);
+
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(9, 11, 20, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    /* backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); */
+}
+
+#chat-record .chat-header {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: bold;
+}
+#chat-record .chat-body {
+    font-size: 12px;
+    line-height: 14px;
+}
+#chat-record .chat-footer {
+    font-size: 12px;
+    line-height: 12px;
+    /* font-weight: lighter; */
+    font-family: "Lato Light";
+    font-style: italic;
+    text-align: right;
+}
+
+#chat-record .chat-body .tagged { color:rgb(61, 142, 218); }
 
 div.point {
     position: absolute;
@@ -115,10 +176,16 @@ div.point {
     height: 20px;
     border-radius: 100px;
     border: 1px solid #FFF;
-    background: radial-gradient(circle, #FF9CF8 0%, #FF38A3 36%, #8A0A0A 100%);
+    background: radial-gradient(circle at top left, #FF9CF8 0%, #ff61b5 36%, #ad2424 100%);
     box-shadow: -2px 4px 4px 0 rgba(0,0,0,0.5);
 }
 
+div.point:hover {
+    background: radial-gradient(circle at top left, #9EFFFC 0%, #38FFB1 36%, #0A458A 100%);
+    box-shadow: 0 0 8px 0 rgba(158, 255, 252, 0.65);
+}
+
 div.point.active {
-    background: radial-gradient(circle, #9EFFFC 0%, #38FFB1 36%, #0A458A 100%);
+    /* background: radial-gradient(circle, #9EFFFC 0%, #38FFB1 36%, #0A458A 100%); */
+    filter: hue-rotate(3.142rad);
 }

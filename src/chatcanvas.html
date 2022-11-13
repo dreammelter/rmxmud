@@ -8,7 +8,8 @@
     <!-- CDN hosted version of React since this is just a quick visual experiment -->
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <link rel="stylesheet" href="./chatcanvas.css">
+    <!-- <link rel="stylesheet" href="./chatcanvas.css"> -->
+    <link rel="stylesheet" href="./flatGlass.css">
     <script src="./chatcanvas.js" type="module"></script>
 </head>
 <body>
@@ -19,6 +20,26 @@
     <div id="room-container">
         <div id="chat-record">
             <!-- global chat record... so a container of chat bubble components -->
+            <div id="placeholder-chat" class="chat-bubble">
+                <div class="chat-icon-container">
+                    <div class="user-icon"></div>
+                </div>
+                <div class="msg-info">
+                    <div class="chat-header">
+                        <p>Chatbot</p>
+                        <div>
+                            <div class="badges"></div>
+                            <div class="status-bubble"></div>
+                        </div>
+                    </div>
+                    <div class="chat-body">
+                        <p>Hello <span class="tagged">@World</span>! Nice to see you. We're trying many new things here.</p>
+                    </div>
+                    <div class="chat-footer">
+                        <p>2022-11-11 01:11 PM</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <main id="canvas">
             <div id="pt-container"><!-- canvas points --></div>
