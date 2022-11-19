@@ -36,10 +36,10 @@ body {
 
 #pt-container {
     contain: content; /* force new stacking context */
-    padding: 0;
-    /* hard-code canvas size for now */
-    width: 102%;
-    height: 102%;
+    padding: 0; margin: 0;
+    /* fit canvas to the window for now */
+    width: 100%;
+    height: 100%;
 }
 
 main {
@@ -60,15 +60,24 @@ main #input-bar {
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 6px;
+    /* overlay over the canvas/ */
+    position: relative;
+    bottom: 145px;
+    margin: 0 15% 0;
 }
 
 main input {
     padding: 12px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: inherit;
 }
 
 main #input-wrapper {
     height: 110px;
     width: 595px;
+    padding: 5px;
     border-radius: 8px;
     background-color: rgba(30,30,30,0.85);
     box-shadow: 0 0 12px 0 rgba(0,0,0,0.5);
@@ -89,6 +98,9 @@ main #drawer-handle {
     border-radius: 8px;
     background-color: #575757;
     margin: 0 10px;
+    /* overlay over the canvas/ */
+    position: relative;
+    bottom: 70%;
 }
 
 main #chest {
@@ -116,11 +128,12 @@ main #chest {
     background: linear-gradient(180deg, #1A1A1A 0%, #151515 87%);
     width: 315px;
     box-shadow: inset 0 3px 5px 0 rgba(0,0,0,0.5);
+    padding: 10px;
 }
 
 #chat-record .user-icon {
-    height: 75px;
-    width: 75px;
+    height: 65px;
+    width: 65px;
     border-radius: 8px;
     background-color: #272728;
 }
@@ -128,7 +141,7 @@ main #chest {
 #chat-record .chat-bubble {
     width: 295px;
     border-radius: 12px;
-    margin: 20px 10px;
+    margin: 20px 0;
     display: flex;
     flex-direction: row;
     gap: 5px;
@@ -165,6 +178,7 @@ main #chest {
     font-family: "Lato Light";
     font-style: italic;
     text-align: right;
+    margin-right: 5px;
 }
 
 #chat-record .chat-body .tagged { color:rgb(61, 142, 218); }
