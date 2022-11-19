@@ -66,12 +66,12 @@ main #input-bar {
     margin: 0 15% 0;
 }
 
-main input {
-    padding: 12px;
+main textarea {
+    padding: 10px;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    border-radius: inherit;
+    border-radius: 6px;
 }
 
 main #input-wrapper {
@@ -83,7 +83,7 @@ main #input-wrapper {
     box-shadow: 0 0 12px 0 rgba(0,0,0,0.5);
 }
 
-main input::-webkit-input-placeholder {
+main textarea::-webkit-input-placeholder {
     opacity: 0.77;
     color: #2D2D2D;
     font-family: "Lato Light";
